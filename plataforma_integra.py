@@ -13,27 +13,101 @@ from tkinter import ttk
 def ir_toplevel_notas():
     global toplevel_notas
     toplevel_notas = Toplevel()
-    toplevel_notas.title =("Notas")
+    toplevel_notas.title("NOTAS")
+    toplevel_notas.resizable(False, False)
     toplevel_notas.geometry("300x300")
-    toplevel_notas.resizable(False,False)
-    toplevel_notas.config(bg="coral1")
+    toplevel_notas.config(bg="white")
 
     #frame título
-
     frame_titulo = Frame(toplevel_notas, width=300, height=300)
-    frame_titulo.config(bg="white", width=280, height=280)
+    frame_titulo.config(bg="gray", width=280, height=30)
     frame_titulo.place(x=10, y=10)
+
+    # texto titulo
+    nombre= Label(toplevel_notas, text="Nota Asignatura")
+    nombre.config(bg = "gray",fg="black", font=("Helvetica", 14))
+    nombre.place(x=10,y=10)
+
+    # frame notas asignatura
+
+    frame_notas_asignatura = Frame(toplevel_notas, width=300, height=300)
+    frame_notas_asignatura.config(bg="gray", width=280, height=240)
+    frame_notas_asignatura.place(x=10, y=50)
+
+    # selec asignatura
+    t_asignatura= Label(toplevel_notas, text="Asigntura:")
+    t_asignatura.config(bg = "gray",fg="black", font=("Helvetica", 14))
+    t_asignatura.place(x=10,y=250)
+
+    # ct asignatura
+    ct_asignatura = Entry(toplevel_notas)
+    ct_asignatura.config(bg="white", fg="blue", font=("Times New Roman", 14), width=10)
+    ct_asignatura.focus_set()
+    ct_asignatura.place(x=160,y=250)
+
+    # nota proced
+    t_proced= Label(toplevel_notas, text="N. Procedimental:")
+    t_proced.config(bg = "gray",fg="black", font=("Helvetica", 14))
+    t_proced.place(x=10,y=70)
+
+    # t proced
+    ct_proced = Entry(toplevel_notas)
+    ct_proced.config(bg="white", fg="blue", font=("Times New Roman", 14), width=10)
+    ct_proced.focus_set()
+    ct_proced.place(x=160,y=70)
+
+    # nota cognitiva
+    t_cognitiva= Label(toplevel_notas, text="Nota cognitiva:")
+    t_cognitiva.config(bg = "gray",fg="black", font=("Helvetica", 14))
+    t_cognitiva.place(x=10,y=105)
+
+    #t cognitiva
+    ct_cognitiva = Entry(toplevel_notas)
+    ct_cognitiva.config(bg="white", fg="blue", font=("Times New Roman", 14), width=10)
+    ct_cognitiva.focus_set()
+    ct_cognitiva.place(x=160,y=100)
+
+    # nota bimestral
+    t_bimestral= Label(toplevel_notas, text="Nota bimestral:")
+    t_bimestral.config(bg = "gray",fg="black", font=("Helvetica", 14))
+    t_bimestral.place(x=10,y=145)
+    
+    #t bimestral
+    ct_bimestral = Entry(toplevel_notas)
+    ct_bimestral.config(bg="white", fg="blue", font=("Times New Roman", 14), width=10)
+    ct_bimestral.focus_set()
+    ct_bimestral.place(x=160,y=140)
+    
+    # nota actitudinal
+    t_actitudinal= Label(toplevel_notas, text="Nota actitudinal:")
+    t_actitudinal.config(bg = "gray",fg="black", font=("Helvetica", 14))
+    t_actitudinal.place(x=10,y=185)
+     
+     #t actitudinal
+    ct_actitudinal = Entry(toplevel_notas)
+    ct_actitudinal.config(bg="white", fg="blue", font=("Times New Roman", 14), width=10)
+    ct_actitudinal.focus_set()
+    ct_actitudinal.place(x=160,y=180)
+
+    # nota autoeva
+    
+
+
+
 
 #toplevel salud
 
 def ir_toplevel_salud():
-    pass
+    global toplevel_salud
+    toplevel_salud = Toplevel()
+    toplevel_salud.title("Salud")
+    toplevel_salud.geometry("300x300")
 
 #se crea la ventana principal ttk
 principal= Tk()
 
 #título de la ventana
-principal.title=("PLATAFORMA INTEGRA")
+principal.title("PLATAFORMA INTEGRA")
 
 #anchor de la ventana
 principal.geometry("500x500")
